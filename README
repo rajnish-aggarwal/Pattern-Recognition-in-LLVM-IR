@@ -1,0 +1,18 @@
+===================================================================
+README for project: Pattern recognition for Idiom search in LLVM IR
+Author: Rajnish Aggarwal
+===================================================================
+
+To check the pattern recognized for Listing 1-3 in report:
+  1) Go to the src folder
+  2) make listing<num> num={1, 2, 3}
+
+e.g. make listing1
+
+===================================================================
+
+The code for Listings 1-5 and the high performance kernel implementation
+is inside the datadir folder which has its own README
+
+
+

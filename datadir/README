@@ -1,0 +1,42 @@
+################################################
+        README for files in DATADIR
+################################################
+
+The following files were used as follows:
+hpc_matmul.c -> consists of the high performance implementation kernel for matrix multiply. This
+                implementation represent the kernel which will be called after the matrix multiply
+                template has been recognized from the LLVM IR
+
+RUN: make hand_opt
+
+
+=========================================================
+These files were used to generate data for listing 1-5
+=========================================================
+                Directory -> matmul_impl
+---------------------------------------------------------
+
+reg_mat_mul.c -> This file implements matrix multiply as represented in Listing 1
+
+RUN with GCC: make gcc_reg_mat_mul
+RUN with Polly: make polly_reg_mat_mul
+
+reg_loop_reversed.c -> This file implements matrix multiply as represented in Listing 2
+
+RUN with GCC: make gcc_reg_rev_mat_mul
+RUN with Polly: make polly_reg_rev_mat_mul_
+
+mat_mul.c -> This file implements matrix multiply as represented in Listing 3
+
+RUN with GCC: make gcc_mat_mul
+RUN with Polly: make polly_mat_mul
+
+loop_reversed.c -> This file implements matrix multiply as represented in Listing 4
+
+RUN with GCC: make gcc_rev_mat_mul
+RUN with Polly: make polly_rev_mat_mul
+
+blocked_mat_mul.c -> This file implements matrix multiply as represented in Listing 5
+
+RUN with GCC: make gcc_blocked_mat_mul
+RUN with Polly: make polly_blocked_mat_mul

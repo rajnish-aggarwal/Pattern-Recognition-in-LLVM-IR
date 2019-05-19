@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+FILE=${1?Error: No file specified}
+clang -Xclang -disable-O0-optnone -msse -mfma -march=native -O0 -emit-llvm -c $FILE.c -o $FILE.bc;
+opt -mem2reg $FILE.bc -o $FILE-m2r.bc;
+llvm-dis $FILE-m2r.bc;
